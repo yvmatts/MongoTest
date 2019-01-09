@@ -12,3 +12,11 @@ before(function(done){
   });
 
 });
+
+beforeEach(function(done){
+
+  mongoose.connection.collections.studentModels.drop(function(){
+    done();
+  });
+
+});
